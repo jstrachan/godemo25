@@ -1,0 +1,139 @@
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-kb7wn[0m
+{"level":"warn","ts":1568993434.4064713,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568993434.4092488,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-8rnvf[0m
+{"level":"warn","ts":1568993435.204468,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568993435.2063348,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-jstrachan-godemo25-pr-4-pr-dd8wd[0m
+{"level":"warn","ts":1568993441.300759,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568993442.395867,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/godemo25.git @ 94a9623247eb27cca6079c629177f2fbd3988cee in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:94a9623247eb27cca6079c629177f2fbd3988cee,4:675e2918289442776355bb8174a5004ea8301aab
+DEBUG: ran git fetch --unshallow origin 675e2918289442776355bb8174a5004ea8301aab: 94a9623247eb27cca6079c629177f2fbd3988cee: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 94a9623247eb27cca6079c629177f2fbd3988cee in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 675e2918289442776355bb8174a5004ea8301aab in 
+Merged SHA 675e2918289442776355bb8174a5004ea8301aab with commit message 'fix: PR4' into base branch master
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: ran git fetch origin 675e2918289442776355bb8174a5004ea8301aab: 94a9623247eb27cca6079c629177f2fbd3988cee: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 94a9623247eb27cca6079c629177f2fbd3988cee in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 675e2918289442776355bb8174a5004ea8301aab in 
+Merged SHA 675e2918289442776355bb8174a5004ea8301aab with commit message 'fix: PR4' into base branch master
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-pr-build-effective.yml
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+PipelineActivity for *********-godemo25-PR-4-1
+Applying changes 
+upserted PipelineResource *********-godemo25-pr-4-pr-buil for the git repository https://github.com/*********/godemo25.git
+upserted Task *********-godemo25-pr-4-pr-buil-from-build-pack-1
+upserted Pipeline *********-godemo25-pr-4-pr-buil-1
+created PipelineRun *********-godemo25-pr-4-pr-buil-1
+created PipelineStructure *********-godemo25-pr-4-pr-buil-1
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mbrfp[0m
+{"level":"warn","ts":1568993455.0328588,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568993455.0337372,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-h4jnb[0m
+{"level":"warn","ts":1568993455.3881826,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568993455.3904197,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/preview\""}
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jstrachan-godemo25-pr-4-pr-buil-xgrzh[0m
+{"level":"warn","ts":1568993461.4569705,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568993462.533628,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*********/godemo25.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:94a9623247eb27cca6079c629177f2fbd3988cee,4:675e2918289442776355bb8174a5004ea8301aab
+DEBUG: ran git fetch --unshallow origin 675e2918289442776355bb8174a5004ea8301aab: 94a9623247eb27cca6079c629177f2fbd3988cee: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 94a9623247eb27cca6079c629177f2fbd3988cee in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge 675e2918289442776355bb8174a5004ea8301aab in 
+Merged SHA 675e2918289442776355bb8174a5004ea8301aab with commit message 'fix: PR4' into base branch master
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-linux[0m
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/godemo25 main.go
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/godemo25"]                     
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2019/09/20 15:31:16 pushed blob: sha256:18ddf374a40539438b79a6439e168827dc391d3e4743f90680b6a5642d3f8102
+2019/09/20 15:31:17 pushed blob: sha256:49ebd61d81a812f1f790564788e22c4353dab02c3730b5e89df26e6add3c609f
+2019/09/20 15:31:19 gcr.io/apps-dev-229310/godemo25:0.0.0-SNAPSHOT-PR-4-1: digest: sha256:089ae32ef80fe8999f53800387c9c5326aba57123e2576918221f02dbad93255 size: 428
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-4-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-4-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/apps-dev-229310\/godemo25|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-4-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-4-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mjstrachan-godemo25-pr-4-pr-buil-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Commit author email is empty for: 675e2918289442776355bb8174a5004ea8301aab
+Looking for commits in: /workspace/source/
+Found commit author match for: ********* with email address: james.strachan@gmail.com
+Created environment *********-godemo25-pr-4
+Namespace **-*********-godemo25-pr-4 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 35.189.201.111.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/apps-dev-229310/godemo25
+    tag: 0.0.0-SNAPSHOT-PR-4-1
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+
+
+Updating PipelineActivities *********-godemo25-pr-4-1 which has status Running
+WARNING: preview application http://godemo25.**-*********-godemo25-pr-4.35.189.201.111.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.252573036s
+WARNING: preview application http://godemo25.**-*********-godemo25-pr-4.35.189.201.111.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.795078749s
+Preview application is now available at: http://godemo25.**-*********-godemo25-pr-4.35.189.201.111.nip.io
